@@ -2,6 +2,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import elements.simpleword;
+
 public class dictCreator{
 
 	ArrayList<simpleword> allWords = new ArrayList<simpleword>();
@@ -10,6 +12,9 @@ public class dictCreator{
 	private File outFile;
 	private File printFile;
 
+	/**
+	 * Use the string type path of the file to create the dictCreator object
+	 */
 	public dictCreator(String fileName){
 
 		this.outFile = new File(fileName);
@@ -17,6 +22,9 @@ public class dictCreator{
 
 	}
 
+	/**
+	 * Use the File type variable of the file to create the dictCreator object
+	 */
 	public dictCreator(File fileName){
 
 		this.outFile = fileName;
@@ -38,57 +46,73 @@ public class dictCreator{
 	}
 
 	// use the quicksort algorithm
-	public static void sortByFrequency(){
+	public static void sortByFrequency(ArrayList<simpleword> waitingForSort){
 
-
-
-	}
-
-	private static void qsort(int[] arr, int low, int high){
-
-
+		qsort(waitingForSort, 0, waitingForSort.size()-1);
 
 	}
 
-	private static int partition(int[] arr, int low, int high){
+	// part of the quicksort algorithm
+	private static void qsort(ArrayList<simpleword> waitingForSort, int low, int high){
 
-
-
-	}
-
-	private void change(int i, int j){
-
-		simpleword temp = allWords.get(i);
-		allWords.set(i, allWords.get(j));
-		allWords.set(j, temp);
+		if(low < high)
+		{
+			int pivot = partition(waitingForSort, low, high);
+			qsort(waitingForSort, low, pivot-1);
+			qsort(waitingForSort, pivot+1, high);
+		}
 
 	}
 
-	public void print(){
+	// part of the quicksort algorithm
+	private static int partition(ArrayList<simpleword> waitingForSort, int low, int high){
+
+		int pivot = waitingForSort.get(low);
+
+		while(low < high) {
+
+			while(low < high && waitingForSort.get(high) >= pivot) {
+				high--;
+			}
+			waitingForSort.set(low, waitingForSort.get(high));
+
+			while(low < high && waitingForSort.get(high) <= pivot) {
+				low++:
+			}
+			waitingForSort.set(high, waitingForSort.get(low));
+
+		}
+
+		waitingForSort.set(low, pivot);
+
+		return low;
+
+	}
+
+	public ArrayList<simpleword> output(){
+
+		return allWords;
+
+	}
+
+	public simpleword[] output(){
+
+		simpleword[] arrayAllWords = new simpleword[allWords.size()];
+
+		for(int i = 0; i < arrayAllWords.length; i++) {
+
+			arrayAllWords[i] = allWords.get(i);
+
+		}
+
+		return arrayAllWords;
+
+	}
+
+	public void output(File fileName){
 
 
 
 	}
 
 }
-
-		// int pointerI = 0;
-		// int pointerJ = allWords.size() - 1;
-		// simpleword temp = allWords.get(0);
-
-		// while(pointerI != pointerJ){
-
-		// 	while(allWords.get(pointerJ).getFrequency() < temp.getFrequency()
-		// 		&&pointerI<pointerJ){
-		// 		pointerJ--;
-		// 	}
-		// 	while(allWords.get(pointerI).getFrequency() > temp.getFrequency()
-		// 		&&pointerI<pointerJ){
-		// 		pointerI++;
-		// 	}
-
-		// 	if(pointerI<pointerJ){
-		// 		change(pointerI, pointerJ);
-		// 	}
-
-		// }
