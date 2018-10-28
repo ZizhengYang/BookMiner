@@ -1,3 +1,8 @@
+/**
+ * A simple word class. 
+ * Only used in dictCreator class. 
+ * Help to store the word spelling and its frequency
+ */
 public class simpleword{
 
 	private String theWord;
