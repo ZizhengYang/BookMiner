@@ -20,7 +20,7 @@ public class dictCreator{
 	public dictCreator(String fileName){
 
 		this.outFile = new File(fileName);
-		this.scanner = new Scanner(this.outFile);
+		//this.scanner = new Scanner(this.outFile);
 
 	}
 
@@ -30,7 +30,7 @@ public class dictCreator{
 	public dictCreator(File fileName){
 
 		this.outFile = fileName;
-		this.scanner = new Scanner(this.outFile);
+		//this.scanner = new Scanner(this.outFile);
 
 	}
 
@@ -69,17 +69,17 @@ public class dictCreator{
 	// part of the quicksort algorithm
 	private static int partition(ArrayList<simpleword> waitingForSort, int low, int high){
 
-		int pivot = waitingForSort.get(low);
+		simpleword pivot = waitingForSort.get(low);
 
 		while(low < high) {
 
-			while(low < high && waitingForSort.get(high) >= pivot) {
+			while(low < high && waitingForSort.get(high).getFrequency() >= pivot.getFrequency()) {
 				high--;
 			}
 			waitingForSort.set(low, waitingForSort.get(high));
 
-			while(low < high && waitingForSort.get(high) <= pivot) {
-				low++:
+			while(low < high && waitingForSort.get(high).getFrequency() <= pivot.getFrequency()) {
+				low++;
 			}
 			waitingForSort.set(high, waitingForSort.get(low));
 
@@ -91,11 +91,11 @@ public class dictCreator{
 
 	}
 
-	public ArrayList<simpleword> output(){
-
-		return allWords;
-
-	}
+	//public ArrayList<simpleword> output(){
+//
+	//	return allWords;
+//
+	//}
 
 	public simpleword[] output(){
 
