@@ -1,0 +1,53 @@
+.background{
+    margin: 0px;
+    background-color: ivory;
+}
+
+.motto{
+    font-size: 80px;
+    color: mediumblue;
+    font-style: italic;
+}
+
+.TOP1{
+    background-color: green;
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+}
+
+.TOP2{
+    background-color: green;
+    width: 100%;
+    height: 100px;
+    margin: 0px;
+}
+
+.TOPchoice{
+    border: 0px;
+    margin-left: 50px;
+    background-color: green;
+    color: ivory;
+}
+
+.border1{
+    height: 1px;
+}
+
+.BooksForAnalysis{
+    font-size: 55px;
+    margin-left: 60px;
+    margin-top: 15px;
+    font-family: "Times New Roman";
+    color: ivory;
+    float: bottom;
+}
+
+.basicFunctions{
+    float: right;
+    margin-right: 10px;
+    width: 80px;
+    height: 40px;
+    background-color: orange;
+    color: ivory;
+}
