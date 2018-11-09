@@ -43,11 +43,103 @@
     float: bottom;
 }
 
-.basicFunctions{
+#fadd{
     float: right;
     margin-right: 10px;
     width: 80px;
     height: 40px;
     background-color: orange;
     color: ivory;
+}
+
+#fdelete{
+    float: right;
+    margin-right: 10px;
+    width: 80px;
+    height: 40px;
+    background-color: orange;
+    color: ivory;
+}
+
+#fshare{
+    float: right;
+    margin-right: 10px;
+    width: 80px;
+    height: 40px;
+    background-color: orange;
+    color: ivory;
+}
+
+#mask{
+
+    background-color: black;
+
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    z-index: 100;
+
+}
+
+#login{
+
+    position: fixed;
+    background-color: white;
+    width:600px;
+    height:800px;
+    z-index:101;
+
+}
+
+#confirm{
+
+    width:60px;
+    height:30px;
+
+}
+#close{
+
+    width:60px;
+    height:30px;
+
+}
+#save{
+
+    width:60px;
+    height:30px;
+
+}
+#help{
+
+    width:60px;
+    height:30px;
+
+}
+
+#file{
+
+    margin: 0px;
+
+}
+
+.cards{
+
+    background-color: ivory;
+    width: 100%;
+    height: 1000px;
+    margin: 0px;
+
+}
+
+.DOWN{
+
+    background-color: green;
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+
 }

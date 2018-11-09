@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -8,6 +9,23 @@
     <link href="HomePage.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="HomePage.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var oBtnAdd = document.getElementById("fadd");
+            oBtnAdd.onclick = function () {
+                fadd();
+            }
+            var oBtnDelete = document.getElementById("fdelete");
+            oBtnDelete.onclick = function(){
+                fdelete();
+            }
+            var oBtnShare = document.getElementById("fshare");
+            oBtnShare.onclick = function () {
+                fshare();
+            }
+        }
+    </script>
 
 </head>
 <body class = "background">
@@ -28,9 +46,22 @@
 
     <div class = "background">
 
-        <button type = "button" class = "basicFunctions" onclick = "fadd()">Add</button>
-        <button type = "button" class = "basicFunctions" onclick = "fdelete()">Delete</button>
-        <button type = "button" class = "basicFunctions" onclick = "fshare()">Share</button>
+        <button id = "fadd">Add</button>
+        <button id = "fdelete">Delete</button>
+        <button id = "fshare">Share</button>
+
+    </div>
+
+    <div class = "cards">
+
+
+
+    </div>
+
+    <div class = "DOWN">
+
+        <h3>BookMiner</h3>
+        <p>We find the useful information inside words and sentences</p>>
 
     </div>
 
